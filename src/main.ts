@@ -9,5 +9,6 @@ async function bootstrap() {
     new ValidationPipe({ transform: true, transformOptions:{groups: ['transform']} })
     );
   await app.listen(3000);
+  
 }
 bootstrap();
