@@ -1,7 +1,7 @@
-Visão geral
+## Visão geral
 Este é um projeto Nest.js para um Tech App que gerencia clientes e seus contatos. O aplicativo fornece APIs RESTful para criar, recuperar, atualizar e excluir clientes e contatos. Inclui autenticação usando tokens JWT e integra Swagger para documentação de API.
 
-Pré-requisitos
+## Pré-requisitos
 Antes de executar o aplicativo, certifique-se de ter o seguinte instalado:
 
 Node.js
@@ -9,32 +9,20 @@ npm (gerenciador de pacotes de nós)
 PostgreSQL
 Instalação
 Clone o repositório:
-
-festa
-
-Copiar código
 git clone <repository-url>
 cd <repository-directory>
 Instale dependências:
-
-festa
-
-Copiar código
 npm install
 Configuração do banco de dados
 Crie um banco de dados PostgreSQL.
 
-Defina a URL de conexão do banco de dados no .envarquivo:
-
-ambiente
+## Defina a URL de conexão do banco de dados no .envarquivo:
 
 Copiar código
 DATABASE_URL=postgresql://<username>:<password>@<host>:<port>/<database>
 Executando o aplicativo
-festa
+npm run start:dev
 
-Copiar código
-npm start
 O aplicativo estará acessível em http://localhost:3000 .
 
 Documentação da API
