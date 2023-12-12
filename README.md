@@ -18,7 +18,7 @@ Crie um banco de dados PostgreSQL.
 
 ## Defina a URL de conexão do banco de dados no .envarquivo:
 
-Copiar código
+
 DATABASE_URL=postgresql://<username>:<password>@<host>:<port>/<database>
 Executando o aplicativo
 npm run start:dev
