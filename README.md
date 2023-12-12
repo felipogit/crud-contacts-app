@@ -10,16 +10,12 @@ PostgreSQL
 Instalação
 Clone o repositório:
 
-festa
 
-Copiar código
+
 git clone <repository-url>
 cd <repository-directory>
 Instale dependências:
 
-festa
-
-Copiar código
 npm install
 Configuração do banco de dados
 Crie um banco de dados PostgreSQL.
@@ -31,9 +27,8 @@ ambiente
 Copiar código
 DATABASE_URL=postgresql://<username>:<password>@<host>:<port>/<database>
 Executando o aplicativo
-festa
 
-Copiar código
+
 npm start
 O aplicativo estará acessível em http://localhost:3000 .
 
