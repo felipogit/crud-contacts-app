@@ -16,17 +16,11 @@ npm install
 Configuração do banco de dados
 Crie um banco de dados PostgreSQL.
 
-<<<<<<< HEAD
 ## Defina a URL de conexão do banco de dados no .env:
-=======
-## Defina a URL de conexão do banco de dados no .envarquivo:
-
->>>>>>> 854c5bff72de684624b002858a6403d411456a98
-
 DATABASE_URL=postgresql://<username>:<password>@<host>:<port>/<database>
-Executando o aplicativo
-npm run start:dev
 
+## Executando o aplicativo
+npm run start:dev
 O aplicativo estará acessível em http://localhost:3000 .
 
 ## Documentação da API
