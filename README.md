@@ -1,73 +1,77 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+Visão geral
+Este é um projeto Nest.js para um Tech App que gerencia clientes e seus contatos. O aplicativo fornece APIs RESTful para criar, recuperar, atualizar e excluir clientes e contatos. Inclui autenticação usando tokens JWT e integra Swagger para documentação de API.
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Pré-requisitos
+Antes de executar o aplicativo, certifique-se de ter o seguinte instalado:
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Node.js
+npm (gerenciador de pacotes de nós)
+PostgreSQL
+Instalação
+Clone o repositório:
 
-## Description
+festa
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Copiar código
+git clone <repository-url>
+cd <repository-directory>
+Instale dependências:
 
-## Installation
+festa
 
-```bash
-$ npm install
-```
+Copiar código
+npm install
+Configuração do banco de dados
+Crie um banco de dados PostgreSQL.
 
-## Running the app
+Defina a URL de conexão do banco de dados no .envarquivo:
 
-```bash
-# development
-$ npm run start
+ambiente
 
-# watch mode
-$ npm run start:dev
+Copiar código
+DATABASE_URL=postgresql://<username>:<password>@<host>:<port>/<database>
+Executando o aplicativo
+festa
 
-# production mode
-$ npm run start:prod
-```
+Copiar código
+npm start
+O aplicativo estará acessível em http://localhost:3000 .
 
-## Test
+Documentação da API
+A documentação do Swagger está disponível em http://localhost:3000/api .
 
-```bash
-# unit tests
-$ npm run test
+Estrutura do Projeto
+O projeto segue uma estrutura modular com os seguintes componentes principais:
 
-# e2e tests
-$ npm run test:e2e
+src: diretório do código-fonte.
+auth: Módulo de autenticação.
+clients: Módulo de clientes para gerenciamento de clientes.
+contacts: Módulo de contatos para gerenciamento de contatos.
+database: Serviço Prisma para interações com banco de dados.
+app.module.ts: Módulo principal do aplicativo.
+main.ts: Ponto de entrada do aplicativo.
+Módulo de autenticação
+O módulo de autenticação inclui serviços e controladores para lidar com a autenticação do usuário.
 
-# test coverage
-$ npm run test:cov
-```
+auth.service.ts: Serviço de autenticação com funcionalidade de login.
+auth.controller.ts: Controlador de autenticação com endpoint de login.
+Módulo Clientes
+O módulo clientes gerencia operações relacionadas ao cliente.
 
-## Support
+clients.service.ts: Serviço para tratamento de operações do cliente (criar, localizar, atualizar, excluir).
+clients.controller.ts: Controlador com endpoints para operações do cliente.
+Módulo de Contatos
+O módulo de contatos gerencia operações relacionadas a contatos.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+contacts.service.ts: Serviço para tratamento de operações de contato (criar, localizar, atualizar, excluir).
+contacts.controller.ts: Controlador com endpoints para operações de contato.
+Documentação do Swagger
+A documentação da API é gerada usando Swagger.
 
-## Stay in touch
+main.ts: Integração do Swagger com o aplicativo Nest.js.
+Prisma Schema
+O esquema Prisma define o modelo e os relacionamentos do banco de dados.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+schema.prisma: arquivo de esquema Prisma especificando os modelos Cliente e Contatos.
+Contribuindo
+Sinta-se à vontade para contribuir abrindo problemas ou enviando solicitações pull. Contribuições são bem-vindas!
