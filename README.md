@@ -16,7 +16,7 @@ npm install
 Configuração do banco de dados
 Crie um banco de dados PostgreSQL.
 
-## Defina a URL de conexão do banco de dados no .envarquivo:
+## Defina a URL de conexão do banco de dados no .env:
 
 Copiar código
 DATABASE_URL=postgresql://<username>:<password>@<host>:<port>/<database>
@@ -25,10 +25,10 @@ npm run start:dev
 
 O aplicativo estará acessível em http://localhost:3000 .
 
-Documentação da API
+## Documentação da API
 A documentação do Swagger está disponível em http://localhost:3000/api .
 
-Estrutura do Projeto
+## Estrutura do Projeto
 O projeto segue uma estrutura modular com os seguintes componentes principais:
 
 src: diretório do código-fonte.
